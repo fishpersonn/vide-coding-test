@@ -40,23 +40,24 @@ export const SettingsView: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Profile Settings */}
-        <Card className="border-0 shadow-sm">
-          <CardHeader>
+        <Card className="border shadow-sm bg-card">
+          <CardHeader className="pb-4">
             <div className="flex items-center space-x-2">
-              <User className="h-5 w-5 text-primary" />
-              <CardTitle>Profile Information</CardTitle>
+              <User className="h-5 w-5 text-foreground" />
+              <CardTitle className="text-lg font-semibold tracking-tight">Profile Information</CardTitle>
             </div>
-            <CardDescription>
+            <CardDescription className="text-sm">
               Update your personal information and preferences
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
+              <Label htmlFor="name" className="text-sm font-medium">Full Name</Label>
               <Input 
                 id="name" 
                 defaultValue={user?.name}
                 placeholder="Enter your full name"
+                className="border-border bg-background"
               />
             </div>
             
@@ -86,20 +87,20 @@ export const SettingsView: React.FC = () => {
         </Card>
 
         {/* Notification Settings */}
-        <Card className="border-0 shadow-sm">
-          <CardHeader>
+        <Card className="border shadow-sm bg-card">
+          <CardHeader className="pb-4">
             <div className="flex items-center space-x-2">
-              <Bell className="h-5 w-5 text-primary" />
-              <CardTitle>Notifications</CardTitle>
+              <Bell className="h-5 w-5 text-foreground" />
+              <CardTitle className="text-lg font-semibold tracking-tight">Notifications</CardTitle>
             </div>
-            <CardDescription>
+            <CardDescription className="text-sm">
               Choose how you want to be notified
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-center justify-between">
               <div className="space-y-1">
-                <div className="font-medium">Email Notifications</div>
+                <div className="font-medium text-foreground">Email Notifications</div>
                 <div className="text-sm text-muted-foreground">
                   Receive updates via email
                 </div>
@@ -114,7 +115,7 @@ export const SettingsView: React.FC = () => {
             
             <div className="flex items-center justify-between">
               <div className="space-y-1">
-                <div className="font-medium">Push Notifications</div>
+                <div className="font-medium text-foreground">Push Notifications</div>
                 <div className="text-sm text-muted-foreground">
                   Get notified on your devices
                 </div>
@@ -129,7 +130,7 @@ export const SettingsView: React.FC = () => {
             
             <div className="flex items-center justify-between">
               <div className="space-y-1">
-                <div className="font-medium">Marketing Emails</div>
+                <div className="font-medium text-foreground">Marketing Emails</div>
                 <div className="text-sm text-muted-foreground">
                   Receive promotional content
                 </div>
@@ -145,72 +146,72 @@ export const SettingsView: React.FC = () => {
         </Card>
 
         {/* Security Settings */}
-        <Card className="border-0 shadow-sm">
-          <CardHeader>
+        <Card className="border shadow-sm bg-card">
+          <CardHeader className="pb-4">
             <div className="flex items-center space-x-2">
-              <Shield className="h-5 w-5 text-primary" />
-              <CardTitle>Security</CardTitle>
+              <Shield className="h-5 w-5 text-foreground" />
+              <CardTitle className="text-lg font-semibold tracking-tight">Security</CardTitle>
             </div>
-            <CardDescription>
+            <CardDescription className="text-sm">
               Manage your account security settings
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <Button variant="outline" className="w-full justify-start">
+          <CardContent className="space-y-3">
+            <Button variant="outline" className="w-full justify-start text-foreground border-border hover:bg-muted/20">
               Change Password
             </Button>
             
-            <Button variant="outline" className="w-full justify-start">
+            <Button variant="outline" className="w-full justify-start text-foreground border-border hover:bg-muted/20">
               Two-Factor Authentication
             </Button>
             
-            <Button variant="outline" className="w-full justify-start">
+            <Button variant="outline" className="w-full justify-start text-foreground border-border hover:bg-muted/20">
               Active Sessions
             </Button>
             
-            <Button variant="outline" className="w-full justify-start text-destructive hover:text-destructive">
+            <Button variant="outline" className="w-full justify-start text-muted-foreground border-border hover:bg-muted/20 hover:text-foreground">
               Delete Account
             </Button>
           </CardContent>
         </Card>
 
         {/* Appearance Settings */}
-        <Card className="border-0 shadow-sm">
-          <CardHeader>
+        <Card className="border shadow-sm bg-card">
+          <CardHeader className="pb-4">
             <div className="flex items-center space-x-2">
-              <Palette className="h-5 w-5 text-primary" />
-              <CardTitle>Appearance</CardTitle>
+              <Palette className="h-5 w-5 text-foreground" />
+              <CardTitle className="text-lg font-semibold tracking-tight">Appearance</CardTitle>
             </div>
-            <CardDescription>
+            <CardDescription className="text-sm">
               Customize how the app looks and feels
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label>Theme</Label>
+              <Label className="text-sm font-medium">Theme</Label>
               <div className="grid grid-cols-3 gap-2">
-                <Button variant="outline" size="sm" className="justify-start">
+                <Button variant="outline" size="sm" className="justify-start text-foreground border-border hover:bg-muted/20">
                   Light
                 </Button>
-                <Button variant="outline" size="sm" className="justify-start">
+                <Button variant="outline" size="sm" className="justify-start text-foreground border-border hover:bg-muted/20">
                   Dark
                 </Button>
-                <Button variant="outline" size="sm" className="justify-start">
+                <Button variant="outline" size="sm" className="justify-start text-foreground border-border hover:bg-muted/20">
                   System
                 </Button>
               </div>
             </div>
             
             <div className="space-y-2">
-              <Label>Language</Label>
-              <Button variant="outline" className="w-full justify-start">
+              <Label className="text-sm font-medium">Language</Label>
+              <Button variant="outline" className="w-full justify-start text-foreground border-border hover:bg-muted/20">
                 English (US)
               </Button>
             </div>
             
             <div className="space-y-2">
-              <Label>Timezone</Label>
-              <Button variant="outline" className="w-full justify-start">
+              <Label className="text-sm font-medium">Timezone</Label>
+              <Button variant="outline" className="w-full justify-start text-foreground border-border hover:bg-muted/20">
                 UTC-5 (Eastern Time)
               </Button>
             </div>

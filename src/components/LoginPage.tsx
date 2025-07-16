@@ -50,18 +50,18 @@ export const LoginPage: React.FC = () => {
         </div>
 
         {/* Login Card */}
-        <Card className="shadow-lg border-0">
-          <CardHeader className="space-y-1 text-center pb-8">
-            <CardTitle className="text-2xl font-semibold">
+        <Card className="shadow border bg-card">
+          <CardHeader className="space-y-1 text-center pb-6">
+            <CardTitle className="text-xl font-semibold tracking-tight text-foreground">
               Welcome back
             </CardTitle>
-            <CardDescription className="text-muted-foreground">
+            <CardDescription className="text-sm text-muted-foreground">
               Sign in to your account to continue
             </CardDescription>
           </CardHeader>
           
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div className="space-y-4">
                 <div>
                   <Input
@@ -70,7 +70,7 @@ export const LoginPage: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="h-12"
+                    className="h-11 border-border bg-background text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 
@@ -81,22 +81,22 @@ export const LoginPage: React.FC = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    className="h-12"
+                    className="h-11 border-border bg-background text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
               </div>
 
               <Button
                 type="submit"
-                className="w-full h-12 text-base font-medium"
+                className="w-full h-11 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary-hover"
                 disabled={isLoading}
               >
                 {isLoading ? "Signing in..." : "Sign in"}
               </Button>
             </form>
 
-            <div className="mt-6 text-center">
-              <button className="text-sm text-primary hover:text-primary-hover transition-colors">
+            <div className="mt-5 text-center">
+              <button className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Forgot your password?
               </button>
             </div>

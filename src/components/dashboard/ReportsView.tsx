@@ -52,7 +52,7 @@ export const ReportsView: React.FC = () => {
           </p>
         </div>
         
-        <Button className="flex items-center space-x-2">
+        <Button className="flex items-center space-x-2 bg-primary text-primary-foreground hover:bg-primary-hover">
           <FileText className="h-4 w-4" />
           <span>New Report</span>
         </Button>
@@ -64,12 +64,12 @@ export const ReportsView: React.FC = () => {
           const Icon = report.icon;
           
           return (
-            <Card key={index} className="border-0 shadow-sm">
-              <CardHeader>
+            <Card key={index} className="border shadow-sm bg-card">
+              <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <Icon className="h-5 w-5 text-primary" />
+                    <div className="p-2 bg-muted/40 rounded border border-border/50">
+                      <Icon className="h-5 w-5 text-foreground" />
                     </div>
                     <div>
                       <CardTitle className="text-lg">{report.title}</CardTitle>
@@ -110,25 +110,25 @@ export const ReportsView: React.FC = () => {
       </div>
 
       {/* Quick Stats */}
-      <Card className="border-0 shadow-sm">
-        <CardHeader>
-          <CardTitle>Report Statistics</CardTitle>
-          <CardDescription>
+      <Card className="border shadow-sm bg-card">
+        <CardHeader className="pb-4">
+          <CardTitle className="text-lg font-semibold tracking-tight">Report Statistics</CardTitle>
+          <CardDescription className="text-sm">
             Overview of your reporting activity
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-4">
-              <div className="text-2xl font-bold text-foreground">24</div>
+              <div className="text-2xl font-semibold text-foreground tracking-tight">24</div>
               <div className="text-sm text-muted-foreground">Reports Generated</div>
             </div>
             <div className="text-center p-4">
-              <div className="text-2xl font-bold text-foreground">156</div>
+              <div className="text-2xl font-semibold text-foreground tracking-tight">156</div>
               <div className="text-sm text-muted-foreground">Total Downloads</div>
             </div>
             <div className="text-center p-4">
-              <div className="text-2xl font-bold text-foreground">8</div>
+              <div className="text-2xl font-semibold text-foreground tracking-tight">8</div>
               <div className="text-sm text-muted-foreground">Scheduled Reports</div>
             </div>
           </div>

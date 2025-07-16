@@ -2,118 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern Dashboard Design System - Clean, minimal, professional */
+/* Minimalist Professional Business Design System - Monochrome */
 
 @layer base {
   :root {
-    /* Core backgrounds */
-    --background: 251 251 251; /* Very light gray */
-    --foreground: 9 9 11; /* Almost black */
+    /* Core backgrounds - Clean whites and light grays */
+    --background: 0 0% 98%; /* #fafafa - Very light gray background */
+    --foreground: 0 0% 9%; /* #171717 - Near black text */
     
-    /* Dashboard surfaces */
+    /* Card surfaces - Pure white with subtle borders */
     --card: 0 0% 100%; /* Pure white cards */
-    --card-foreground: 9 9 11;
+    --card-foreground: 0 0% 9%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 9 9 11;
+    --popover-foreground: 0 0% 9%;
     
-    /* Brand colors - Modern blue */
-    --primary: 239 68% 68%; /* Modern blue */
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 239 68% 62%;
+    /* Primary elements - Dark neutral tones */
+    --primary: 0 0% 12%; /* #1e1e1e - Dark gray for primary elements */
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 0 0% 18%; /* #2e2e2e - Slightly lighter on hover */
     
-    /* Subtle grays */
-    --secondary: 244 244 245; /* Light gray */
-    --secondary-foreground: 82 82 91;
+    /* Secondary elements - Light grays */
+    --secondary: 0 0% 91%; /* #e5e7eb - Light gray */
+    --secondary-foreground: 0 0% 24%; /* #3d3d3d */
     
-    --muted: 244 244 245;
-    --muted-foreground: 113 113 122;
+    /* Muted elements */
+    --muted: 0 0% 96%; /* #f5f5f5 - Very light gray */
+    --muted-foreground: 0 0% 46%; /* #757575 - Medium gray */
     
-    --accent: 244 244 245;
-    --accent-foreground: 39 39 42;
+    /* Accent elements */
+    --accent: 0 0% 94%; /* #f0f0f0 */
+    --accent-foreground: 0 0% 18%;
     
-    /* Status colors */
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
+    /* Status colors - Minimal and professional */
+    --destructive: 0 0% 24%; /* Dark gray instead of red */
+    --destructive-foreground: 0 0% 98%;
     
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 100%;
+    --success: 0 0% 24%; /* Dark gray instead of green */
+    --success-foreground: 0 0% 98%;
     
-    /* Borders and inputs */
-    --border: 228 228 231;
-    --input: 228 228 231;
-    --ring: 239 68% 68%;
+    /* Borders and inputs - Subtle grays */
+    --border: 0 0% 89%; /* #e3e3e3 - Light gray borders */
+    --input: 0 0% 89%;
+    --ring: 0 0% 18%; /* Dark gray focus rings */
     
-    /* Sidebar specific */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 82 82 91;
-    --sidebar-hover: 244 244 245;
-    --sidebar-active: 239 68% 68%;
+    /* Sidebar specific - Dark professional theme */
+    --sidebar-background: 0 0% 12%; /* #1e1e1e - Dark gray sidebar */
+    --sidebar-foreground: 0 0% 88%; /* #e0e0e0 - Light gray text */
+    --sidebar-hover: 0 0% 18%; /* #2e2e2e - Hover state */
+    --sidebar-active: 0 0% 24%; /* #3d3d3d - Active state */
     --sidebar-active-foreground: 0 0% 100%;
     
-    /* Spacing and effects */
-    --radius: 0.75rem;
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    /* Professional spacing and effects */
+    --radius: 0.5rem; /* Slightly smaller radius for professional look */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.04);
+    --shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.08), 0 1px 2px -1px hsl(0 0% 0% / 0.08);
+    --shadow-lg: 0 4px 6px -1px hsl(0 0% 0% / 0.08), 0 2px 4px -2px hsl(0 0% 0% / 0.08);
     
-    /* Animations */
-    --transition-all: all 0.15s ease-in-out;
-    --transition-colors: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    /* Subtle animations */
+    --transition-all: all 0.12s ease-in-out;
+    --transition-colors: background-color 0.12s ease-in-out, border-color 0.12s ease-in-out, color 0.12s ease-in-out;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -124,5 +73,26 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    letter-spacing: -0.011em;
+  }
+  
+  /* Professional typography improvements */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  
+  /* Tighter spacing for professional look */
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  .text-xs {
+    font-size: 0.75rem;
+    line-height: 1.3;
   }
 }
