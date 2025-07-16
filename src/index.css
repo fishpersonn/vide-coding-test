@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Dashboard Design System - Clean, minimal, professional */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    /* Core backgrounds */
+    --background: 251 251 251; /* Very light gray */
+    --foreground: 9 9 11; /* Almost black */
+    
+    /* Dashboard surfaces */
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 9 9 11;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 9 9 11;
+    
+    /* Brand colors - Modern blue */
+    --primary: 239 68% 68%; /* Modern blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 239 68% 62%;
+    
+    /* Subtle grays */
+    --secondary: 244 244 245; /* Light gray */
+    --secondary-foreground: 82 82 91;
+    
+    --muted: 244 244 245;
+    --muted-foreground: 113 113 122;
+    
+    --accent: 244 244 245;
+    --accent-foreground: 39 39 42;
+    
+    /* Status colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Borders and inputs */
+    --border: 228 228 231;
+    --input: 228 228 231;
+    --ring: 239 68% 68%;
+    
+    /* Sidebar specific */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 82 82 91;
+    --sidebar-hover: 244 244 245;
+    --sidebar-active: 239 68% 68%;
+    --sidebar-active-foreground: 0 0% 100%;
+    
+    /* Spacing and effects */
+    --radius: 0.75rem;
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    
+    /* Animations */
+    --transition-all: all 0.15s ease-in-out;
+    --transition-colors: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out;
 
     --sidebar-background: 0 0% 98%;
 
