@@ -28,10 +28,11 @@ Preferred communication style: Simple, everyday language.
 ## Key Components
 
 ### Authentication System
-- Context-based authentication with React Context API
-- Mock authentication (accepts any credentials for demo)
-- Session management with user state persistence
+- JWT-based authentication with bcrypt password hashing
+- PostgreSQL user storage with email-based authentication
+- API routes for user registration, login, and user management
 - Protected routes with authentication guards
+- Full user management with secure password handling
 
 ### Database Layer
 - **ORM**: Drizzle ORM with PostgreSQL dialect
