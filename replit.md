@@ -22,7 +22,7 @@ Preferred communication style: Simple, everyday language.
 - **Runtime**: Node.js with Express.js framework
 - **Language**: TypeScript with ES modules
 - **Database**: PostgreSQL with Drizzle ORM
-- **Storage**: In-memory storage implementation with interface for future database integration
+- **Storage**: PostgreSQL database with Drizzle ORM and interface-based storage layer
 - **Development**: Hot reload with Vite middleware integration
 
 ## Key Components
@@ -67,7 +67,7 @@ Preferred communication style: Simple, everyday language.
 
 3. **Database Operations**:
    - Storage interface abstracts database operations
-   - Current implementation uses in-memory storage
+   - PostgreSQL database with Neon serverless connection
    - Schema validation with Zod integration
    - Type-safe database operations with Drizzle ORM
 
