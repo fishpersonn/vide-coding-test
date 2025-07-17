@@ -55,7 +55,7 @@ export const SettingsView: React.FC = () => {
               <Label htmlFor="name" className="text-sm font-medium">Full Name</Label>
               <Input 
                 id="name" 
-                defaultValue={user?.name}
+                defaultValue={user?.email}
                 placeholder="Enter your full name"
                 className="border-border bg-background"
               />
@@ -107,7 +107,7 @@ export const SettingsView: React.FC = () => {
               </div>
               <Switch 
                 checked={notifications.email}
-                onCheckedChange={(checked) => 
+                onCheckedChange={(checked: boolean) => 
                   setNotifications(prev => ({ ...prev, email: checked }))
                 }
               />
@@ -122,7 +122,7 @@ export const SettingsView: React.FC = () => {
               </div>
               <Switch 
                 checked={notifications.push}
-                onCheckedChange={(checked) => 
+                onCheckedChange={(checked: boolean) => 
                   setNotifications(prev => ({ ...prev, push: checked }))
                 }
               />
@@ -137,7 +137,7 @@ export const SettingsView: React.FC = () => {
               </div>
               <Switch 
                 checked={notifications.marketing}
-                onCheckedChange={(checked) => 
+                onCheckedChange={(checked: boolean) => 
                   setNotifications(prev => ({ ...prev, marketing: checked }))
                 }
               />

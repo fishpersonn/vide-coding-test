@@ -31,14 +31,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeItem, onItemSelect }) =>
       <div className="p-6 border-b border-border">
         <div className="flex items-center space-x-3">
           <Avatar className="h-10 w-10">
-            <AvatarImage src={avatar} alt={user?.name} />
+            <AvatarImage src={avatar} alt={user?.email} />
             <AvatarFallback className="bg-primary text-primary-foreground">
               <User className="h-5 w-5" />
             </AvatarFallback>
           </Avatar>
           <div className="flex-1 min-w-0">
             <div className="text-sm font-medium text-foreground truncate">
-              {user?.name || 'User'}
+              {user?.email || 'User'}
             </div>
             <div className="text-xs text-muted-foreground truncate">
               {user?.email}

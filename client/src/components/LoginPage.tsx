@@ -17,19 +17,11 @@ export const LoginPage: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const success = await login(email, password);
-      if (success) {
-        toast({
-          title: "Welcome back!",
-          description: "You have successfully logged in.",
-        });
-      } else {
-        toast({
-          title: "Login failed",
-          description: "Please check your credentials and try again.",
-          variant: "destructive"
-        });
-      }
+      await login(email, password);
+      toast({
+        title: "Welcome back!",
+        description: "You have successfully logged in.",
+      });
     } catch (error) {
       toast({
         title: "Login error",

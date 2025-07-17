@@ -29,7 +29,7 @@ export const TopNavigation: React.FC = () => {
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="relative h-10 w-10 rounded-full">
               <Avatar className="h-10 w-10">
-                <AvatarImage src={avatar} alt={user?.name} />
+                <AvatarImage src={avatar} alt={user?.email} />
                 <AvatarFallback className="bg-primary text-primary-foreground">
                   <User className="h-5 w-5" />
                 </AvatarFallback>
@@ -40,7 +40,7 @@ export const TopNavigation: React.FC = () => {
           <DropdownMenuContent className="w-56" align="end" forceMount>
             <div className="flex items-center justify-start gap-2 p-2">
               <div className="flex flex-col space-y-1 leading-none">
-                <p className="font-medium text-sm">{user?.name}</p>
+                <p className="font-medium text-sm">{user?.email}</p>
                 <p className="w-[200px] truncate text-xs text-muted-foreground">
                   {user?.email}
                 </p>
