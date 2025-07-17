@@ -9,9 +9,17 @@ import { DashboardLayout } from "@/components/DashboardLayout";
 const queryClient = new QueryClient();
 
 const AppContent = () => {
-  const { isAuthenticated } = useAuth();
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-surface">
+        <div className="text-foreground">Loading...</div>
+      </div>
+    );
+  }
   
-  return isAuthenticated ? <DashboardLayout /> : <LoginPage />;
+  return user ? <DashboardLayout /> : <LoginPage />;
 };
 
 const App = () => (
