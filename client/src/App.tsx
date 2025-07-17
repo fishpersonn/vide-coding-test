@@ -13,7 +13,7 @@ const AppContent = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-surface">
+      <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-foreground">Loading...</div>
       </div>
     );
